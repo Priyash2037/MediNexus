@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Healthcare Telemedicine Design System - Rural Friendly */
+
+@layer base {
+  :root {
+    /* Base healthcare colors */
+    --background: 210 20% 98%;
+    --foreground: 210 11% 15%;
+
+    /* Card and surface colors */
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 15%;
+
+    /* Medical trust blue - primary brand */
+    --primary: 210 83% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 83% 40%;
+
+    /* Healing green - secondary actions */
+    --secondary: 142 69% 42%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 142 69% 37%;
+
+    /* Muted healthcare tones */
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 11% 46%;
+
+    /* Accent - warm trust */
+    --accent: 200 89% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    /* System colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 83% 45%;
+
+    --radius: 0.75rem;
+
+    /* Healthcare gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-trust: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    --gradient-green: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(142 69% 47%) 100%);
+
+    /* Healthcare shadows */
+    --shadow-card: 0 4px 20px hsl(var(--primary) / 0.08);
+    --shadow-button: 0 2px 10px hsl(var(--primary) / 0.2);
+    --shadow-hero: 0 8px 40px hsl(var(--primary) / 0.12);
+
+    /* Rural-friendly spacing */
+    --spacing-section: 4rem;
+    --spacing-card: 2rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Rural-friendly typography */
+  h1, h2, h3 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl leading-snug;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl leading-relaxed;
+  }
+
+  /* Large, accessible buttons for rural users */
+  .btn-large {
+    @apply px-8 py-4 text-lg font-medium rounded-xl transition-all duration-200;
+    min-height: 3.5rem;
+  }
+
+  .btn-xl {
+    @apply px-10 py-6 text-xl font-semibold rounded-2xl transition-all duration-200;
+    min-height: 4rem;
+  }
+
+  /* Accessible focus styles */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-4 focus:ring-primary/30;
+  }
+}
